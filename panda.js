@@ -1,14 +1,21 @@
 $(document).ready(function() {
-
-	function Panda() {
+	var newelem = $('div/').attr("id", 'recever');
+  var body = $('body');
+  body.append(newelem);
+  
+  
+  body.append(newelem);
+  
+	  $('.panda').click(function() {
     var type = $(this).attr("data-type");
     var tendance = $(this).attr("data-tendance");
 
     if (type != undefined) {
-      $('div').html(type + " " + tendance);
+      $('#recever').html(type + " " + tendance);
     } else {
-      $('div').html('mais de kowwwaaa ?');
+      $('#recever').html('mais de kowwwaaa ?');
     }
-  }
-    $('.panda').click(Panda);
+  })
+
 });
+
