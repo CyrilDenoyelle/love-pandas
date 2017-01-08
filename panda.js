@@ -1,13 +1,14 @@
-$('.output').hide();
+$(document).ready(function() {
 
-$('.panda').click(function() {
-	var type = $(this).attr("data-type");
-	var tendance = $(this).attr("data-tendance");
+	function Panda() {
+    var type = $(this).attr("data-type");
+    var tendance = $(this).attr("data-tendance");
 
-	if (type != "undefined" ) {
-
-		$('#recever').html(type + " " + tendance);
-	} else {
-		$('#recever').html('mais de kowwwaaa ?');
-	}
+    if (type != undefined) {
+      $('div').html(type + " " + tendance);
+    } else {
+      $('div').html('mais de kowwwaaa ?');
+    }
+  }
+    $('.panda').click(Panda);
 });
